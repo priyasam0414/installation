@@ -1,12 +1,33 @@
+Git installation and configuration:
+
+#Install the git in linux system by the following command
+
+sudo apt-get install git
+
+#navigate to the directory to which you want to make as local repository directory
+
+#the following command initiates that specific directory as local repository
+
 git init
+
+
+#add all the files in the directory to git repository
 
 git add *
 
+#commit the files that are selected
+
 git commit -m "First Commit"
+
+#check the status of the files updated
 
 git status
 
+#specifyt your repository URL and it will prompt for username and password of your git account
+
 git remote add origin <url>
+
+#push the files to the git repository
 
 git push -u origin master
 
