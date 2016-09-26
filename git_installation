@@ -1,0 +1,13 @@
+git init
+
+git add *
+
+git commit -m "First Commit"
+
+git status
+
+git remote add origin <url>
+
+git push -u origin master
+
+
