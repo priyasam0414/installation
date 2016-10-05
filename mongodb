@@ -1,0 +1,36 @@
+#create a file called as mongodb-org-3.2.repo in the path specified
+
+sudo gedit /etc/yum.repos.d/mongodb-org-3.2.repo
+
+#copy and paste the following lines inside the file which you have created
+
+[mongodb-org-3.2]
+name=MongoDB Repository
+baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/3.2/x86_64/
+gpgcheck=1
+enabled=1
+gpgkey=https://www.mongodb.org/static/pgp/server-3.2.asc
+
+#save the file and run the following command and check wether the repository has been added.
+
+sudo yum update
+
+#now install mongodb with the following command
+
+sudo yum install -y mongodb-org
+
+#once the installation is over now we have to create directory for our database to get store
+
+sudo mkdir -p /data/db
+
+#change the permission for the directory created
+
+sudo chmod 777 /data/db
+
+#start the server by following command
+
+mongod
+
+#once the server is listening next we have to open the cli mode to carry our operations
+
+mongo
