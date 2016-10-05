@@ -10,7 +10,6 @@ sudo apt-get install git
 
 git init
 
-
 #add all the files in the directory to git repository
 
 git add *
